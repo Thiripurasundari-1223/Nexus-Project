@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lktdaeajlFgQnDislrdpuwRIfOWUYMtJ/UV+qbmlSSI=",
+  "Source": "PolicyManagement.API",
+  "BasePath": "_content/PolicyManagement.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

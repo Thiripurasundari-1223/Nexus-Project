@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "X+RmxmmT8sn/qKtONtmxIUHsXCRuiiWCAcQxdIKA7yY=",
+  "Source": "ExitManagement.API",
+  "BasePath": "_content/ExitManagement.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

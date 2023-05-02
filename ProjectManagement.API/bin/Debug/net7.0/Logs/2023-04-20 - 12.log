@@ -1,0 +1,65 @@
+2023-04-20 12:02:00,054 [16] INFO  App  
+ DateTime	URL	Data	Exception	Message	StackTrace 
+ 
+2023-04-20 12:02:00,063 [16] INFO  App  
+ --------------------------------------Projects--------------------------------------------------------------- 
+ 
+2023-04-20 12:02:00,072 [16] INFO  App  
+ Date: 20-04-2023 12:02:00 
+ 
+2023-04-20 12:02:00,080 [16] INFO  App  
+ URL: Projects/ApproveOrRejectProject 
+ 
+2023-04-20 12:02:00,087 [16] INFO  App  
+ Data: System.Collections.ListDictionaryInternal 
+ 
+2023-04-20 12:02:00,102 [16] INFO  App  
+ InnerException: Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'projectAudits'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__208_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:7737e81a-468f-4550-b26b-e5d4d53ef204
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at ProjectManagement.DAL.Repository.BaseRepository`1.SaveChangesAsync() in C:\Users\ThiripurasundariKari\source\repos\Nexus-Project\ProjectManagement.DAL\Repository\BaseRepository.cs:line 38
+   at ProjectManagement.DAL.Services.PMServices.AddProjectChangesToAudit(ProjectAudit objProjectAduitDetails) in C:\Users\ThiripurasundariKari\source\repos\Nexus-Project\ProjectManagement.DAL\Services\PMServices.cs:line 1878
+   at ProjectManagement.DAL.Services.PMServices.ApproveOrRejectProjectByFinanceHead(ApproveOrRejectProject pApproveOrRejectProject) in C:\Users\ThiripurasundariKari\source\repos\Nexus-Project\ProjectManagement.DAL\Services\PMServices.cs:line 1846 
+ 
+2023-04-20 12:02:00,108 [16] INFO  App  
+ Message: One or more errors occurred. (An error occurred while saving the entity changes. See the inner exception for details.) 
+ 
+2023-04-20 12:02:00,123 [16] INFO  App  
+ StackTrace:    at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at ProjectManagement.API.Controllers.ProjectsController.ApproveOrRejectProjectByFinanceHead(ApproveOrRejectProject pApproveOrRejectProject) in C:\Users\ThiripurasundariKari\source\repos\Nexus-Project\ProjectManagement.API\Controllers\ProjectsController.cs:line 1533 
+ 
+2023-04-20 12:02:00,130 [16] INFO  App  
+ ------------------------------------------------------------------------------------------------------------------- 
+ 
+2023-04-20 12:02:00,176 [16] ERROR App  
+ --------------------------------------20-04-2023 12:02:00--------------------------------------------------------------- 
+ 
+2023-04-20 12:02:00,183 [16] ERROR App  
+ Request and Response: Id: 20042023120155-RequestDateAndTime: 20-04-2023 12:01:55-Request: http localhost:1083/api/Projects/ApproveOrRejectProject  {_  "projectId": 1002,_  "projectStatus": "Ongoing",_  "comments": "string",_  "departmentHeadId": 20,_  "projectManagerOfficerId": 40,_  "bUManagerId": 70_}__-ResponseDateAndTime: 20-04-2023 12:02:00-Response: 200: {"statusCode":"FAILURE","statusText":"Unexpected error occurred. Try again.","data":0}__- 
+ 
+2023-04-20 12:02:00,188 [16] ERROR App  
+ ------------------------------------------------------------------------------------------------------------------- 
+ 

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QoN2NmGuzfnRg0SKiUktStQowkZvwQ8tzee7ZcgNtmY=",
+  "Source": "APIGateWay.API",
+  "BasePath": "_content/APIGateWay.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
